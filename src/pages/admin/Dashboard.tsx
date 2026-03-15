@@ -4,6 +4,9 @@ import { Package, ShoppingCart, Settings, LayoutDashboard, LogOut } from 'lucide
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import logo from '@/assets/logo.png';
+import AdminProducts from './Products';
+import AdminOrders from './Orders';
+import AdminSettings from './Settings';
 
 const sidebarLinks = [
   { to: '/admin/dashboard', label: 'Overview', icon: LayoutDashboard },
