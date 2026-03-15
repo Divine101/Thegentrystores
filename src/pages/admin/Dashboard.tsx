@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, Outlet, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Package, ShoppingCart, Settings, LayoutDashboard, LogOut } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import logo from '@/assets/logo.png';
+import AdminProducts from './Products';
+import AdminOrders from './Orders';
+import AdminSettings from './Settings';
 
 const sidebarLinks = [
   { to: '/admin/dashboard', label: 'Overview', icon: LayoutDashboard },
@@ -97,9 +100,13 @@ const AdminDashboard = () => {
               Connect to the database to see live data. Manage products, orders, and settings from the sidebar.
             </p>
           </div>
-        ) : (
-          <Outlet />
-        )}
+        ) : location.pathname === '/admin/products' ? (
+          <AdminProducts />
+        ) : location.pathname === '/admin/orders' ? (
+          <AdminOrders />
+        ) : location.pathname === '/admin/settings' ? (
+          <AdminSettings />
+        ) : null}
       </main>
     </div>
   );
