@@ -100,9 +100,13 @@ const AdminDashboard = () => {
               Connect to the database to see live data. Manage products, orders, and settings from the sidebar.
             </p>
           </div>
-        ) : (
-          <Outlet />
-        )}
+        ) : location.pathname === '/admin/products' ? (
+          <AdminProducts />
+        ) : location.pathname === '/admin/orders' ? (
+          <AdminOrders />
+        ) : location.pathname === '/admin/settings' ? (
+          <AdminSettings />
+        ) : null}
       </main>
     </div>
   );
