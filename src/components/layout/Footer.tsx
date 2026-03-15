@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-1">
-            <img src={logo} alt="The Gentry" className="h-16 w-auto mb-4" />
+            <img src={logo} alt="The Gentry" className="h-16 w-auto mb-4 mix-blend-lighten" />
             <p className="text-sm text-muted-foreground font-body leading-relaxed">
               Luxury fashion for the distinguished Nigerian gentleman. Crafted with heritage, worn with authority.
             </p>

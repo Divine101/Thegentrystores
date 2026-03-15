@@ -51,7 +51,7 @@ const Header = () => {
 
             {/* Logo */}
             <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-              <img src={logo} alt="The Gentry" className="h-14 w-auto" />
+              <img src={logo} alt="The Gentry" className="h-14 w-auto mix-blend-lighten" />
             </Link>
 
             {/* Right nav */}
