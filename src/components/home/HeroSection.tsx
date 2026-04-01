@@ -59,8 +59,8 @@ const HeroSection = () => {
       </AnimatePresence>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-end pb-20 md:pb-32 px-4 sm:px-6 md:px-16 lg:px-24 pt-20">
