@@ -39,7 +39,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden">
+    <section className="relative h-[100svh] w-full overflow-hidden pt-20">
       {/* Background images */}
       <AnimatePresence mode="wait">
         <motion.div
