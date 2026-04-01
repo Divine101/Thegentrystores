@@ -76,7 +76,7 @@ const HeroSection = () => {
             <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4">
               {slide.label}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] mb-6">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] mb-4 md:mb-6">
               {slide.heading[0]}<br />
               <span className="italic text-primary">{slide.heading[1]}</span>
             </h1>
