@@ -39,7 +39,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[100svh] w-full overflow-hidden">
       {/* Background images */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -53,7 +53,7 @@ const HeroSection = () => {
           <img
             src={slide.image}
             alt={slide.label}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
       </AnimatePresence>
@@ -63,7 +63,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-16 lg:px-24">
+      <div className="relative z-10 h-full flex flex-col justify-end pb-20 md:pb-32 px-4 sm:px-6 md:px-16 lg:px-24 pt-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -76,16 +76,16 @@ const HeroSection = () => {
             <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4">
               {slide.label}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] mb-6">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] mb-4 md:mb-6">
               {slide.heading[0]}<br />
               <span className="italic text-primary">{slide.heading[1]}</span>
             </h1>
-            <p className="font-body text-sm md:text-base text-muted-foreground max-w-md mb-10 leading-relaxed">
+            <p className="font-body text-xs sm:text-sm md:text-base text-muted-foreground max-w-md mb-6 md:mb-10 leading-relaxed">
               {slide.description}
             </p>
             <Link
               to="/shop"
-              className="inline-flex items-center gap-4 px-10 py-4 bg-primary text-primary-foreground font-body text-xs tracking-[0.2em] uppercase hover:bg-primary/90 transition-all duration-500 luxury-ease gold-glow"
+              className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-10 py-3 md:py-4 bg-primary text-primary-foreground font-body text-[10px] md:text-xs tracking-[0.2em] uppercase hover:bg-primary/90 transition-all duration-500 luxury-ease gold-glow"
             >
               Explore the Collection
               <span className="w-8 h-px bg-primary-foreground" />

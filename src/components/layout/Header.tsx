@@ -50,8 +50,8 @@ const Header = () => {
             </nav>
 
             {/* Logo */}
-            <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-              <img src={logo} alt="The Gentry" className="h-14 w-auto mix-blend-lighten" />
+            <Link to="/" className="flex-shrink-0">
+              <img src={logo} alt="The Gentry" className="h-10 md:h-14 w-auto mix-blend-lighten" />
             </Link>
 
             {/* Right nav */}
