@@ -45,7 +45,7 @@ const WhatsAppButton = ({ product, selectedSize, className = '', variant = 'full
       className={`inline-flex items-center justify-center gap-3 px-8 py-4 border border-primary text-primary font-body text-xs tracking-[0.15em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-500 luxury-ease ${className}`}
     >
       <WhatsAppIcon size={16} />
-      Consult the Atelier
+      Order on WhatsApp
     </a>
   );
 };

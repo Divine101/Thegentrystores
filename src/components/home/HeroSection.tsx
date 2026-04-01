@@ -22,7 +22,7 @@ const slides = [
     image: heroAgbada,
     label: 'Agbada Collection',
     heading: ['Heritage', 'Redefined'],
-    description: 'Royal agbada with masterful embroidery — where Nigerian heritage meets contemporary luxury.',
+    description: 'Stunning agbada with beautiful embroidery — tradition meets modern style.',
   },
 ];
 

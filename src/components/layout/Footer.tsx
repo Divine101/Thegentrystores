@@ -46,7 +46,7 @@ const Footer = () => {
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors font-body flex items-center gap-2"
               >
                 <Phone size={14} />
-                WhatsApp Concierge
+                WhatsApp Us
               </a>
               <a
                 href="https://instagram.com"
