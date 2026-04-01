@@ -32,8 +32,8 @@ const Header = () => {
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
 
-            {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-8">
+            {/* Desktop nav - left */}
+            <nav className="hidden md:flex items-center gap-8 flex-1">
               {navLinks.slice(0, 3).map(link => (
                 <Link
                   key={link.label}
@@ -49,24 +49,26 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="The Gentry" className="h-10 md:h-14 w-auto mix-blend-lighten" />
+            {/* Logo - centered */}
+            <Link to="/" className="flex-shrink-0 mx-4">
+              <img src={logo} alt="The Gentry" className="h-10 md:h-14 w-auto" />
             </Link>
 
-            {/* Right nav */}
-            <div className="flex items-center gap-8">
-              <nav className="hidden md:flex items-center gap-8">
-                {navLinks.slice(3).map(link => (
-                  <Link
-                    key={link.label}
-                    to={link.to}
-                    className="text-xs font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 luxury-ease"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
+            {/* Desktop nav - right + cart */}
+            <div className="hidden md:flex items-center gap-8 flex-1 justify-end">
+              {navLinks.slice(3).map(link => (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className="text-xs font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 luxury-ease"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Cart */}
+            <div className="flex items-center">
               <Link to="/checkout" className="relative p-2 text-foreground hover:text-primary transition-colors">
                 <ShoppingBag size={20} />
                 {totalItems > 0 && (
