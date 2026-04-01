@@ -129,7 +129,7 @@ const ProductDetail = () => {
                   onClick={handleAddToCart}
                   className="flex-1 px-8 py-4 bg-primary text-primary-foreground font-body text-xs tracking-[0.15em] uppercase hover:bg-primary/90 transition-all duration-500 luxury-ease gold-glow"
                 >
-                  Secure the Piece
+                  Add to Cart
                 </button>
                 <WhatsAppButton product={product} selectedSize={selectedSize} className="flex-1" />
               </div>

@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="md:col-span-1">
-            <img src={logo} alt="The Gentry" className="h-16 w-auto mb-4 mix-blend-lighten" />
+             <img src={logo} alt="The Gentry" className="h-16 w-auto mb-4 mix-blend-lighten" />
             <p className="text-sm text-muted-foreground font-body leading-relaxed">
-              Luxury fashion for the distinguished Nigerian gentleman. Crafted with heritage, worn with authority.
+              Premium fashion for the modern Nigerian man. Quality you can see, style you can feel.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-body tracking-[0.2em] uppercase text-primary mb-6">Concierge</h4>
+            <h4 className="text-xs font-body tracking-[0.2em] uppercase text-primary mb-6">Contact Us</h4>
             <div className="flex flex-col gap-3">
               <a
                 href="https://wa.me/2348012345678?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20The%20Gentry%20collections."
@@ -46,7 +46,7 @@ const Footer = () => {
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors font-body flex items-center gap-2"
               >
                 <Phone size={14} />
-                WhatsApp Concierge
+                WhatsApp Us
               </a>
               <a
                 href="https://instagram.com"

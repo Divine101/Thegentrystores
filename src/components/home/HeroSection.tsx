@@ -10,19 +10,19 @@ const slides = [
     image: heroSenator,
     label: 'Senator Collection',
     heading: ['Crafted for', 'Royalty'],
-    description: 'Exquisite senator wear with intricate embroidery, designed for the man who commands every room.',
+    description: 'Premium senator wear with detailed embroidery, made for the man who stands out.',
   },
   {
     image: heroSuit,
     label: 'Suit Collection',
     heading: ['The Art of', 'Tailoring'],
-    description: 'Double-breasted precision. Bespoke suits that define modern elegance for the distinguished gentleman.',
+    description: 'Sharp, well-fitted suits that bring out your best look for any occasion.',
   },
   {
     image: heroAgbada,
     label: 'Agbada Collection',
     heading: ['Heritage', 'Redefined'],
-    description: 'Royal agbada with masterful embroidery — where Nigerian heritage meets contemporary luxury.',
+    description: 'Stunning agbada with beautiful embroidery — tradition meets modern style.',
   },
 ];
 
