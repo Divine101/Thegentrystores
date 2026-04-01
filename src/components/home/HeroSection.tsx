@@ -85,7 +85,7 @@ const HeroSection = () => {
             </p>
             <Link
               to="/shop"
-              className="inline-flex items-center gap-4 px-10 py-4 bg-primary text-primary-foreground font-body text-xs tracking-[0.2em] uppercase hover:bg-primary/90 transition-all duration-500 luxury-ease gold-glow"
+              className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-10 py-3 md:py-4 bg-primary text-primary-foreground font-body text-[10px] md:text-xs tracking-[0.2em] uppercase hover:bg-primary/90 transition-all duration-500 luxury-ease gold-glow"
             >
               Explore the Collection
               <span className="w-8 h-px bg-primary-foreground" />
