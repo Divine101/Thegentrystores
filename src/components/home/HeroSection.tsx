@@ -10,7 +10,7 @@ const slides = [
     image: heroSenator,
     label: 'Senator Collection',
     heading: ['Crafted for', 'Royalty'],
-    description: 'Exquisite senator wear with intricate embroidery, designed for the man who commands every room.',
+    description: 'Premium senator wear with detailed embroidery, made for the man who stands out.',
   },
   {
     image: heroSuit,
