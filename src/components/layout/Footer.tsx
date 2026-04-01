@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-body tracking-[0.2em] uppercase text-primary mb-6">Concierge</h4>
+            <h4 className="text-xs font-body tracking-[0.2em] uppercase text-primary mb-6">Contact Us</h4>
             <div className="flex flex-col gap-3">
               <a
                 href="https://wa.me/2348012345678?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20The%20Gentry%20collections."
