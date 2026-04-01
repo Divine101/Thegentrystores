@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Package, ShoppingCart, Settings, LayoutDashboard, LogOut } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import logo from '@/assets/logo.png';
 import AdminProducts from './Products';
@@ -21,19 +20,16 @@ const AdminDashboard = () => {
   const [user, setUser] = useState<string>('');
 
   useEffect(() => {
-    const checkAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        navigate('/admin');
-        return;
-      }
-      setUser(session.user.email || '');
-    };
-    checkAuth();
+    const session = sessionStorage.getItem('admin_session');
+    if (!session) {
+      navigate('/admin');
+      return;
+    }
+    setUser(import.meta.env.VITE_ADMIN_EMAIL || 'Admin');
   }, [navigate]);
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
+  const handleLogout = () => {
+    sessionStorage.removeItem('admin_session');
     toast.success('Signed out');
     navigate('/admin');
   };

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import logo from '@/assets/logo.png';
+
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL as string;
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD as string;
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -11,20 +13,19 @@ const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) throw error;
-      toast.success('Welcome back');
-      navigate('/admin/dashboard');
-    } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'Login failed';
-      toast.error(message);
-    } finally {
+    setTimeout(() => {
+      if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+        sessionStorage.setItem('admin_session', 'authenticated');
+        toast.success('Welcome back');
+        navigate('/admin/dashboard');
+      } else {
+        toast.error('Invalid credentials');
+      }
       setLoading(false);
-    }
+    }, 600);
   };
 
   return (
