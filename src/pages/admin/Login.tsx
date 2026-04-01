@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import logo from '@/assets/logo.png';
-
-const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL as string;
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD as string;
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -13,19 +11,20 @@ const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-        sessionStorage.setItem('admin_session', 'authenticated');
-        toast.success('Welcome back');
-        navigate('/admin/dashboard');
-      } else {
-        toast.error('Invalid credentials');
-      }
+    try {
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      toast.success('Welcome back');
+      navigate('/admin/dashboard');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Login failed';
+      toast.error(message);
+    } finally {
       setLoading(false);
-    }, 600);
+    }
   };
 
   return (
@@ -39,7 +38,7 @@ const AdminLogin = () => {
         <div className="text-center mb-12">
           <img src={logo} alt="The Gentry" className="h-16 mx-auto mb-6" />
           <h1 className="font-display text-2xl text-foreground">Admin Portal</h1>
-          <p className="font-body text-xs text-muted-foreground mt-2">Invite-only access</p>
+          <p className="font-body text-xs text-muted-foreground mt-2">Authorised access only</p>
         </div>
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
