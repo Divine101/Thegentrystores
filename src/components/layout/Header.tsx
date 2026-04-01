@@ -59,19 +59,8 @@ const Header = () => {
               {navLinks.slice(3).map(link => (
             </Link>
 
-            {/* Right nav */}
-            <div className="flex items-center gap-8">
-              <nav className="hidden md:flex items-center gap-8">
-                {navLinks.slice(3).map(link => (
-                  <Link
-                    key={link.label}
-                    to={link.to}
-                    className="text-xs font-body tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 luxury-ease"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
+            {/* Right section */}
+            <div className="flex items-center">
               <Link to="/checkout" className="relative p-2 text-foreground hover:text-primary transition-colors">
                 <ShoppingBag size={20} />
                 {totalItems > 0 && (

@@ -73,7 +73,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-2xl"
           >
-            <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4">
+            <p className="text-xs font-body tracking-[0.3em] uppercase text-primary mb-4 drop-shadow-md">
               {slide.label}
             </p>
             <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground leading-[0.9] mb-4 md:mb-6">
