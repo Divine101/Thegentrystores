@@ -16,7 +16,7 @@ const slides = [
     image: heroSuit,
     label: 'Suit Collection',
     heading: ['The Art of', 'Tailoring'],
-    description: 'Double-breasted precision. Bespoke suits that define modern elegance for the distinguished gentleman.',
+    description: 'Sharp, well-fitted suits that bring out your best look for any occasion.',
   },
   {
     image: heroAgbada,
