@@ -63,7 +63,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32 px-6 md:px-16 lg:px-24">
+      <div className="relative z-10 h-full flex flex-col justify-end pb-20 md:pb-32 px-4 sm:px-6 md:px-16 lg:px-24 pt-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
