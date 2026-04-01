@@ -80,7 +80,7 @@ const HeroSection = () => {
               {slide.heading[0]}<br />
               <span className="italic text-primary">{slide.heading[1]}</span>
             </h1>
-            <p className="font-body text-sm md:text-base text-muted-foreground max-w-md mb-10 leading-relaxed">
+            <p className="font-body text-xs sm:text-sm md:text-base text-muted-foreground max-w-md mb-6 md:mb-10 leading-relaxed">
               {slide.description}
             </p>
             <Link
