@@ -88,7 +88,7 @@ const AdminSettings = () => {
               value={whatsapp}
               onChange={e => setWhatsapp(e.target.value)}
               className="w-full bg-transparent border border-border px-4 py-3 text-foreground font-body text-sm focus:outline-none focus:border-primary transition-colors"
-              placeholder="+2348012345678"
+              placeholder="+2349023457189"
             />
             <p className="text-xs font-body text-muted-foreground mt-2">
               Include country code. This number receives all WhatsApp order messages.

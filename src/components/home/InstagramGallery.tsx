@@ -27,7 +27,7 @@ const InstagramGallery = () => {
           {images.map((img, i) => (
             <motion.a
               key={i}
-              href="https://instagram.com"
+              href="https://www.instagram.com/the_gentry_clothing?igsh=cW9yNmp3a244enI4&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0 }}

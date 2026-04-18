@@ -40,7 +40,7 @@ const Footer = () => {
             <h4 className="text-xs font-body tracking-[0.2em] uppercase text-primary mb-6">Contact Us</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="https://wa.me/2348012345678?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20The%20Gentry%20collections."
+                href="https://wa.me/2349023457189?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20The%20Gentry%20collections."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors font-body flex items-center gap-2"
@@ -49,13 +49,13 @@ const Footer = () => {
                 WhatsApp Us
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/the_gentry_clothing?igsh=cW9yNmp3a244enI4&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors font-body flex items-center gap-2"
               >
                 <Instagram size={14} />
-                @thegentry
+                @the_gentry_clothing
               </a>
             </div>
           </div>

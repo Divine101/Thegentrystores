@@ -10,7 +10,7 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton = ({ product, selectedSize, className = '', variant = 'full' }: WhatsAppButtonProps) => {
-  const phoneNumber = '2348012345678';
+  const phoneNumber = '2349023457189';
 
   const getMessage = () => {
     if (product) {

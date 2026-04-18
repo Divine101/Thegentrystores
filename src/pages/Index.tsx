@@ -1,6 +1,7 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import CategoryMenu from '@/components/home/CategoryMenu';
 import FeaturedCollection from '@/components/home/FeaturedCollection';
 import NewArrivals from '@/components/home/NewArrivals';
 import SignaturePieces from '@/components/home/SignaturePieces';
@@ -14,6 +15,7 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <CategoryMenu />
         <FeaturedCollection />
         <NewArrivals />
         <SignaturePieces />
