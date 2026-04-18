@@ -7,15 +7,29 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ProductCard from '@/components/ProductCard';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import { products, formatPrice } from '@/lib/mock-data';
+import { formatPrice } from '@/lib/mock-data';
+import { useProductBySlug, useProducts } from '@/hooks/useProducts';
+import { Loader2 } from 'lucide-react';
 import { useCart } from '@/lib/cart-context';
 
 const ProductDetail = () => {
   const { slug } = useParams();
-  const product = products.find(p => p.slug === slug);
+  const { data: product, isLoading: isProductLoading } = useProductBySlug(slug);
+  const { data: products = [], isLoading: isProductsLoading } = useProducts();
   const [selectedSize, setSelectedSize] = useState('');
   const [imageZoom, setImageZoom] = useState(false);
   const { addItem } = useCart();
+
+  if (isProductLoading || isProductsLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Header />
+        <div className="pt-20">
+          <Loader2 className="animate-spin text-muted-foreground w-8 h-8" />
+        </div>
+      </div>
+    );
+  }
 
   if (!product) {
     return (

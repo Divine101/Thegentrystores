@@ -5,13 +5,16 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ProductCard from '@/components/ProductCard';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import { products, categories } from '@/lib/mock-data';
+import { categories } from '@/lib/mock-data';
+import { useProducts } from '@/hooks/useProducts';
+import { Loader2 } from 'lucide-react';
 
 const Shop = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get('category') || 'all';
   const [activeCategory, setActiveCategory] = useState(categoryParam);
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'newest'>('featured');
+  const { data: products = [], isLoading } = useProducts();
 
   const filtered = useMemo(() => {
     let result = activeCategory === 'all' ? products : products.filter(p => p.category === activeCategory);
@@ -84,7 +87,11 @@ const Shop = () => {
 
         {/* Grid */}
         <div className="container mx-auto px-4 md:px-8 pb-24">
-          {filtered.length === 0 ? (
+          {isLoading ? (
+            <div className="flex justify-center items-center py-20">
+              <Loader2 className="animate-spin text-muted-foreground w-8 h-8" />
+            </div>
+          ) : filtered.length === 0 ? (
             <div className="text-center py-20">
               <p className="font-display text-2xl text-muted-foreground">No pieces found in this collection.</p>
             </div>

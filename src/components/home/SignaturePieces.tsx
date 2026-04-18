@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { products } from '@/lib/mock-data';
 import { formatPrice } from '@/lib/mock-data';
+import { useProducts } from '@/hooks/useProducts';
 
 const SignaturePieces = () => {
+  const { data: products = [] } = useProducts();
   const signature = products.slice(0, 2);
 
   return (

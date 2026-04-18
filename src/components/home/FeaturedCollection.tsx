@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import ProductCard from '@/components/ProductCard';
-import { products } from '@/lib/mock-data';
+import { useProducts } from '@/hooks/useProducts';
 
 const FeaturedCollection = () => {
+  const { data: products = [] } = useProducts();
   const featured = products.filter(p => p.featured);
 
   return (

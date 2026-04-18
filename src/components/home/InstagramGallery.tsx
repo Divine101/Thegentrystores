@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
-import { products } from '@/lib/mock-data';
+import { useProducts } from '@/hooks/useProducts';
 
 const InstagramGallery = () => {
-  const images = products.map(p => p.images[0]);
+  const { data: products = [] } = useProducts();
+  const images = products.map(p => p.images && p.images[0]).filter(Boolean);
 
   return (
     <section className="py-24 md:py-32 px-4 md:px-8">

@@ -2,9 +2,10 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
-import { products } from '@/lib/mock-data';
+import { useProducts } from '@/hooks/useProducts';
 
 const NewArrivals = () => {
+  const { data: products = [] } = useProducts();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
